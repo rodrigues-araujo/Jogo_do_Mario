@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 100%;
+    height: 50vh;
+    border-bottom: 15px solid #01db1ac9;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background:  linear-gradient(#87ceeb, #E0F6FF);
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 10%; /* Define a largura do cano em porcentagem */
+    max-width: 80px; /* Define um tamanho máximo para o cano */
+    width: 50px;
+    animation: pipe-animation 1.5s infinite linear;
+    
+} 
+.mario{
+    width: 15%; /* Define a largura do Mario em porcentagem */
+    max-width: 150px; /* Define um tamanho máximo para o Mario */
+    position: absolute;
+    bottom: 0px;
+}
+.jump{    
+    animation: jump 500ms  ease-out;
+}
+
+.clouds{
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 10s infinite linear;
+}
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3rem;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10; /* Para ficar na frente do jogo */
+}
+
+.score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: #000000;
+}
+
+
+.game-over button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+@keyframes clouds-animation{
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes  pipe-animation {
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes jump {
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
