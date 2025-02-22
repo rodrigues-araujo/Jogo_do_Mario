@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Jogadores</title>
+    <link rel="stylesheet" href="/css/crud-style.css"> <!-- Adicione aqui o CSS específico do CRUD -->
+</head>
+<body>
+    <h1>Cadastro de Jogadores</h1>
+    <form id="player-form">
+        <label for="player-name">Nome:</label>
+        <input type="text" id="player-name" required>
+        <button type="submit">Salvar</button>
+    </form>
+
+    <h2>Lista de Jogadores</h2>
+    <table id="player-table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os jogadores cadastrados aparecerão aqui -->
+        </tbody>
+    </table>
+
+    <script src="crud.js"></script> <!-- Adicione o arquivo JS -->
+</body>
+</html>
